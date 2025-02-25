@@ -1,23 +1,13 @@
-# tt_scanner_buddy
+# TT Scanner Buddy (Web Version)
 
-A scanner companion tool for Unraid.
+This is a Flask-based web application that identifies mined rock types and resources based on an RS signature.
 
-## Features:
-- Easy setup via Unraid Community Applications
-- Web interface for configuration
-- Automatic updates via Docker Hub
+## Features
 
-## Installation in Unraid:
-1. Open `Apps` tab in Unraid.
-2. Search for `tt_scanner_buddy`.
-3. Click `Install` and set configuration.
-4. Access the WebUI at `http://[UNRAID_IP]:8080`.
+- **Flask Web UI**: Enter an RS signature, select mining location (Asteroid/Planet).
+- **Resource Identification**: Single or mixed clusters, special cases (derelict ships, hull plates, gems).
+- **Configuration**: Data loaded from `resources.json`.
+- **Optimized for Unraid**: Docker container auto-populates `/app` if empty, supports persistent storage.
 
-## Manual Installation:
-Run with:
-```sh
-docker run -d \
-  -p 8080:8080 \
-  -v /mnt/user/appdata/tt_scanner_buddy:/app/config \
-  -e TZ=America/New_York \
-  your-dockerhub-user/tt_scanner_buddy:latest
+## Directory Structure
+

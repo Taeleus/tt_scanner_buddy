@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TT Scanner Buddy - Web Interface</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <h1>TT Scanner Buddy</h1>
+  </div>
+  
+  <div class="container">
+    <div class="instructions">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Enter an RS signature in the text field.</li>
+        <li>Select a mining location (Asteroid or Planet).</li>
+        <li>Click <strong>Identify</strong> or press <strong>Enter</strong> to see results.</li>
+      </ol>
+    </div>
+    
+    <form method="post" class="input-form">
+      <div class="form-group">
+        <label for="rs_signature">Enter RS Signature:</label>
+        <input type="text" id="rs_signature" name="rs_signature" autofocus>
+      </div>
+      
+      <div class="form-group">
+        <label for="mining_location">Select Mining Location:</label>
+        <select id="mining_location" name="mining_location">
+          <option value="Asteroid">Asteroid</option>
+          <option value="Planet">Planet</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn-identify">Identify</button>
+    </form>
+    
+    {% if error %}
+      <div class="results error-box">
+        <strong>Error:</strong> {{ error }}
+      </div>
+    {% endif %}
+    
+    {% if result %}
+      <div class="results">
+        <h2>Results:</h2>
+        {% if is_string_result %}
+          <p>{{ result }}</p>
+        {% else %}
+          <ul>
+          {% for item in result %}
+            <li>
+              <strong>{{ item[0] }}</strong> - Quantity: {{ item[1] }}<br>
+              <pre>{{ item[2] }}</pre>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

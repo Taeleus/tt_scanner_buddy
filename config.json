@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "settings": {
+      "debug": true,
+      "default_port": 5000
+  }
+}
