@@ -53,7 +53,7 @@
           {% for item in result %}
             <li>
               <strong>{{ item[0] }}</strong> - Quantity: {{ item[1] }}<br>
-              <pre>{{ item[2] }}</pre>
+              <pre>{{ item[2]|safe }}</pre>
             </li>
           {% endfor %}
           </ul>
