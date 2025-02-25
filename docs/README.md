@@ -11,13 +11,13 @@ A scanner companion tool for Unraid.
 1. Open `Apps` tab in Unraid.
 2. Search for `tt_scanner_buddy`.
 3. Click `Install` and set configuration.
-4. Access the WebUI at `http://[UNRAID_IP]:8080`.
+4. Access the WebUI at `http://[UNRAID_IP]:5000`.
 
 ## Manual Installation:
 Run with:
 ```sh
 docker run -d \
-  -p 8080:8080 \
+  -p 5000:5000 \
   -v /mnt/user/appdata/tt_scanner_buddy:/app/config \
   -e TZ=America/New_York \
   your-dockerhub-user/tt_scanner_buddy:latest
