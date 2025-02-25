@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container>
+  <Name>tt_scanner_buddy</Name>
+  <Repository>taeleus/tt-scanner-buddy:latest</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  
+  <!-- Overview text prefilled for the container -->
+  <Overview>
+    TT Scanner Buddy is a web-based resource identification tool that uses an RS signature 
+    to determine rock types and special cases (gems, hull plates, derelict ships). Designed 
+    for easy deployment on Unraid.
+  </Overview>
+  
+  <Category>Tools: Utilities</Category>
+  <Support>https://github.com/your-repo/tt_scanner_buddy/issues</Support>
+  <Project>https://github.com/your-repo/tt_scanner_buddy</Project>
+  
+  <!-- WebUI URL with the port prefilled -->
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  
+  <Icon>https://your-repo/logo.png</Icon>
+  <DockerHub>https://hub.docker.com/r/your-dockerhub-user/tt-scanner-buddy</DockerHub>
+  
+  <!-- Port Binding: map host port 5000 to container port 5000 -->
+  <Bindings>
+    <Port>
+      <HostPort>5000</HostPort>
+      <ContainerPort>5000</ContainerPort>
+      <Protocol>tcp</Protocol>
+    </Port>
+  </Bindings>
+  
+  <!-- Volume Mapping: map host folder for persistent data -->
+  <Volumes>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tt_scanner_buddy</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Volumes>
+  
+  <!-- Environment Variables -->
+  <Environment>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+    </Variable>
+    <Variable>
+      <Name>LOG_LEVEL</Name>
+      <Value>info</Value>
+    </Variable>
+  </Environment>
+</Container>
