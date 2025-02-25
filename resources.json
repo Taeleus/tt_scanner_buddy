@@ -1,87 +1,91 @@
 {
-    "asteroid_rock_values": {
+  "asteroid_rock_values": {
       "C Type": {
-        "value": 1700,
-        "color": "white",
-        "resources": "8% Quantanium\n35% Taranite\n35% Bexalite\n20% Gold"
+          "value": 1700,
+          "color": "white",
+          "resources": "16% Quantanium\n30% Gold\n30% Bexalite\n24% Taranite"
       },
       "S Type": {
-        "value": 1720,
-        "color": "white",
-        "resources": "8% Quantanium\n38% Taranite\n31% Bexalite\n18% Gold"
+          "value": 1720,
+          "color": "white",
+          "resources": "16% Quantanium\n30% Gold\n30% Bexalite\n24% Taranite"
       },
       "P Type": {
-        "value": 1750,
-        "color": "white",
-        "resources": "7% Quantanium\n21% Taranite\n31% Bexalite\n15% Gold"
+          "value": 1750,
+          "color": "white",
+          "resources": "10% Quantanium\n35% Bexalite\n35% Taranite\n20% Gold"
       },
       "M Type": {
-        "value": 1850,
-        "color": "white",
-        "resources": "5% Quantanium\n40% Taranite\n13% Bexalite"
+          "value": 1850,
+          "color": "white",
+          "resources": "12% Quantanium\n40% Taranite\n23% Bexalite\n25% Gold"
       },
       "Q Type": {
-        "value": 1870,
-        "color": "white",
-        "resources": "9% Quantanium\n30% Gold\n13% Taranite\n12% Bexalite"
+          "value": 1870,
+          "color": "white",
+          "resources": "15% Quantanium\n40% Bexalite\n20% Taranite\n25% Gold"
       },
       "E Type": {
-        "value": 1900,
-        "color": "white",
-        "resources": "6% Quantanium\n40% Gold\n13% Bexalite\n10% Taranite"
+          "value": 1900,
+          "color": "white",
+          "resources": "18% Quantanium\n30% Gold\n30% Bexalite\n22% Taranite"
+      },
+      "SALVAGE PANELS": {
+          "value": 2000,
+          "color": "white",
+          "resources": "20% Quantanium\n30% Gold\n30% Bexalite\n20% Taranite"
       }
-    },
-    "planet_rock_values": {
+  },
+  "planet_rock_values": {
       "Atacamite": {
-        "value": 1800,
-        "color": "white",
-        "resources": "7% Quantanium\n20% Bexalite\n13% Taranite"
+          "value": 1800,
+          "color": "white",
+          "resources": "14% Quantanium\n30% Gold\n30% Bexalite\n26% Taranite"
       },
       "Felsic": {
-        "value": 1770,
-        "color": "white",
-        "resources": "10% Quantanium\n30% Taranite\n33% Gold\n69% Bexalite"
+          "value": 1770,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Taranite\n33% Gold\n27% Bexalite"
       },
       "Gneiss": {
-        "value": 1840,
-        "color": "white",
-        "resources": "7% Quantanium\n23% Taranite\n18% Gold\n16% Bexalite"
+          "value": 1840,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Gold\n20% Taranite\n20% Bexalite"
       },
       "Granite": {
-        "value": 1920,
-        "color": "white",
-        "resources": "10% Quantanium\n33% Gold\n15% Taranite\n10% Bexalite"
+          "value": 1920,
+          "color": "white",
+          "resources": "16% Quantanium\n30% Gold\n30% Bexalite\n24% Taranite"
       },
       "Igneous": {
-        "value": 1950,
-        "color": "white",
-        "resources": "7% Quantanium\n21% Taranite\n21% Gold\n16% Bexalite"
+          "value": 1950,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Gold\n30% Bexalite\n30% Taranite"
       },
       "Obsidian": {
-        "value": 1790,
-        "color": "white",
-        "resources": "7% Quantanium\n23% Taranite\n18% Gold\n18% Bexalite"
+          "value": 1790,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Gold\n30% Bexalite\n30% Taranite"
       },
       "Quartzite": {
-        "value": 1820,
-        "color": "white",
-        "resources": "7% Quantanium\n18% Taranite\n33% Bexalite"
+          "value": 1820,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Gold\n30% Bexalite\n30% Taranite"
       },
       "Shale": {
-        "value": 1730,
-        "color": "white",
-        "resources": "7% Quantanium\n10% Taranite\n31% Gold\n10% Bexalite"
+          "value": 1730,
+          "color": "white",
+          "resources": "10% Quantanium\n30% Gold\n30% Bexalite\n30% Taranite"
       }
-    },
-    "special_cases": {
+  },
+  "special_cases": {
       "derelict_ship": 10000,
       "hull_plates": 2000,
       "gems": 620,
       "gem_types": [
-        "Hadanite",
-        "Aphorite",
-        "Dolovine"
+          "Hadanite",
+          "Aphorite",
+          "Dolovine"
       ]
-    }
   }
-  
+}

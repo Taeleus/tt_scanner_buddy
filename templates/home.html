@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <title>TT Scanner Buddy - Web Interface</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var details = document.querySelector(".collapsible-section");
+      // Check localStorage for saved state
+      var savedState = localStorage.getItem("collapsibleState");
+      if (savedState === "closed") {
+        details.removeAttribute("open");
+      }
+      // Listen for toggle events and save state
+      details.addEventListener("toggle", function() {
+        localStorage.setItem("collapsibleState", details.open ? "open" : "closed");
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="header">
@@ -45,7 +59,7 @@
     
     {% if result %}
       <div class="results">
-        <h2>Results:</h2>
+        <h2>Results for RS Signature: {{ rs_value }}</h2>
         {% if is_string_result %}
           <p>{{ result }}</p>
         {% else %}
@@ -60,6 +74,48 @@
         {% endif %}
       </div>
     {% endif %}
+    
+    <!-- Collapsible Section -->
+    <details class="collapsible-section" open>
+      <summary>Asteroid Mining Best Locations (Top 5)</summary>
+      <div class="collapsible-content">
+        <p>Below is a quick reference for the best mining locations for each mineral:</p>
+        
+        <table class="mining-locations-table">
+          <thead>
+            <tr>
+              <th>Mineral</th>
+              <th>Order</th>
+              <th>Best Locations (Top 5)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Quantanium</td>
+              <td>QFPCSM</td>
+              <td>ARC-L5-A, CRU-L4-A, HUR-L4-A, MIC-L3-A, Aaron Halo</td>
+            </tr>
+            <tr>
+              <td>Bexalite</td>
+              <td>PSCQEM</td>
+              <td>HUR-L1-A, HUR-L2-A, HUR-L3-A, YELA BELT, ARC-L1-A</td>
+            </tr>
+            <tr>
+              <td>Taranite</td>
+              <td>CSPQEM</td>
+              <td>ARC-L3-A, CRU-L4-A, MIC-L2-A, CRU-L3-A, CRU-L1-A</td>
+            </tr>
+            <tr>
+              <td>Gold</td>
+              <td>EMQCSP</td>
+              <td>ARC-L5-A, CRU-L4-A, MIC-L3-A, ARC-L4-A, CRU-L1-A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <!-- End Collapsible Section -->
+    
   </div>
 </body>
 </html>
