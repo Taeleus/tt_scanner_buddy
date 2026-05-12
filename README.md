@@ -1,3 +1,6 @@
+### This is HEAVILY outdated now with all the Star Citizen updates and I dont know when ill circle back to this to give it some much needed love.
+
+
 # TT Scanner Buddy (Web Version)
 
 This is a Flask-based web application that identifies mined rock types and resources based on an RS signature.
